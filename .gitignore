@@ -1,0 +1,40 @@
+# Ignorar archivos generados por Stack
+/.stack-work/
+
+# Ignorar archivos binarios generados
+*.o
+*.hi
+*.exe
+
+# Ignorar archivos temporales de compilación
+dist/
+*.cabal
+
+# Ignorar archivos de configuración de editor
+*.swp
+*.swo
+*.DS_Store
+
+# Ignorar directorios de caché y temporales
+.cache/
+*.log
+
+# Ignorar archivos de entorno
+.env
+
+# Ignorar otros archivos específicos del proyecto (si es necesario)
+
+
+#▎Explicación de las entradas:
+#• /.stack-work/: Ignora el directorio donde Stack almacena los archivos de trabajo y compilación.
+#• *.o, *.hi, *.exe: Ignora archivos objeto, archivos de interfaz y ejecutables generados durante la compilación.
+#• dist/, *.cabal: Ignora archivos y directorios relacionados con la distribución y la configuración de Cabal.
+#• *.swp, *.swo, *.DS_Store: Ignora archivos temporales de editores como Vim y archivos de sistema que no son necesarios.
+#• *.log: Ignora archivos de registro que puedan ser generados durante la ejecución o prueba del juego.
+#• .env: Ignora archivos de configuración de entorno (si decides usarlos).
+
+
+#2. Inicializa un nuevo proyecto con Stack:
+
+# stack new 2048-haskell
+#  cd 2048-haskell
