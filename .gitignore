@@ -32,9 +32,3 @@ dist/
 #• *.swp, *.swo, *.DS_Store: Ignora archivos temporales de editores como Vim y archivos de sistema que no son necesarios.
 #• *.log: Ignora archivos de registro que puedan ser generados durante la ejecución o prueba del juego.
 #• .env: Ignora archivos de configuración de entorno (si decides usarlos).
-
-
-#2. Inicializa un nuevo proyecto con Stack:
-
-# stack new 2048-haskell
-#  cd 2048-haskell

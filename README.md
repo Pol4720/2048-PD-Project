@@ -2,17 +2,23 @@
 
 ## ▎2048 Game in Haskell
 
-### Descripción
+## Descripción
 
 + This repository contains a fully implemented version of the popular game 2048, developed as a final project for a declarative programming course. Built using Haskell, this project showcases functional programming principles and leverages Haskell's powerful type system.
 
-### Estructura del Proyecto
+## Estructura del Proyecto
+
+### game/
+
++ **stack.yaml**: Archivo de configuración para Stack, que incluye las dependencias necesarias para compilar y ejecutar el juego.
+
+#### app/
+
++ **Main.hs**: Este es el punto de entrada del programa. Aquí se inicializa el juego, se configuran los bucles de eventos y se inicia la ejecución.
 
 #### src/
 
 Esta carpeta contiene el código fuente del juego.
-
-+ **Main.hs**: Este es el punto de entrada del programa. Aquí se inicializa el juego, se configuran los bucles de eventos y se inicia la ejecución.
 
 + **Game/**: Contiene la lógica principal del juego.
   + **Game.hs**: Controlador principal que gestiona el estado del juego y las interacciones entre los diferentes componentes.
@@ -29,14 +35,6 @@ Esta carpeta contiene el código fuente del juego.
 + **Config/**: Contiene configuraciones generales del juego.
   + **Config.hs**: Define constantes y configuraciones como el tamaño de el tablero, colores, etc.
 
-#### assets/
-
-Esta carpeta almacena todos los recursos utilizados en el juego.
-
-+ **images/**: Imágenes que se utilizarán en el juego (por ejemplo, sprites de los tiles).
-+ **sounds/**: Archivos de sonido para efectos o música de fondo.
-+ **fonts/**: Fuentes utilizadas para mostrar texto en el juego.
-
 #### tests/
 
 Esta carpeta contiene pruebas unitarias y pruebas de integración para asegurar la calidad del código.
@@ -44,10 +42,17 @@ Esta carpeta contiene pruebas unitarias y pruebas de integración para asegurar 
 + **GameTests.hs**: Pruebas relacionadas con la lógica del juego.
 + **GraphicsTests.hs**: Pruebas relacionadas con la parte gráfica.
 
+### assets/
+
+Esta carpeta almacena todos los recursos utilizados en el juego.
+
++ **images/**: Imágenes que se utilizarán en el juego (por ejemplo, sprites de los tiles).
++ **sounds/**: Archivos de sonido para efectos o música de fondo.
++ **fonts/**: Fuentes utilizadas para mostrar texto en el juego.
+
 #### Otros Archivos
 
 + **README.md**: Este archivo proporciona información sobre el proyecto, su estructura y cómo ejecutarlo.
-+ **stack.yaml**: Archivo de configuración para Stack, que incluye las dependencias necesarias para compilar y ejecutar el juego.
 
 ### Desarrollo y Ejecución
 
@@ -109,7 +114,7 @@ Si tienes la línea de comandos de VSCode (code) configurada, puedes usar los si
 
 Una vez que tengas todo instalado:
 
-1. Abre el proyecto en VSCode:
+1. Abre el proyecto y navega hasta game en VSCode:
 
    `code .`
 
