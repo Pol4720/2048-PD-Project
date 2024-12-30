@@ -1,144 +1,144 @@
 # 2048-PD-Project
 
-## ▎2048 Game in Haskell
+## 2048 Game in Haskell
 
-## Descripción
+## Description
 
 + This repository contains a fully implemented version of the popular game 2048, developed as a final project for a declarative programming course. Built using Haskell, this project showcases functional programming principles and leverages Haskell's powerful type system.
 
-## Estructura del Proyecto
+## Project Structure
 
 ### game/
 
-+ **stack.yaml**: Archivo de configuración para Stack, que incluye las dependencias necesarias para compilar y ejecutar el juego.
++ **stack.yaml**: Configuration file for Stack, including the dependencies needed to compile and run the game.
+
+#### assets/
+
+This folder stores all the resources used in the game.
+
++ **images/**: Images used in the game (e.g., tile sprites).
++ **sounds/**: Sound files for effects or background music.
++ **fonts/**: Fonts used to display text in the game.
 
 #### app/
 
-+ **Main.hs**: Este es el punto de entrada del programa. Aquí se inicializa el juego, se configuran los bucles de eventos y se inicia la ejecución.
++ **Main.hs**: This is the entry point of the program. Here the game is initialized, event loops are set up, and execution begins.
 
 #### src/
 
-Esta carpeta contiene el código fuente del juego.
+This folder contains the game's source code.
 
-+ **Game/**: Contiene la lógica principal del juego.
-  + **Game.hs**: Controlador principal que gestiona el estado del juego y las interacciones entre los diferentes componentes.
-  + **GameLogic.hs**: Implementa la lógica del juego, como mover y fusionar los tiles, así como verificar si el jugador ha ganado o perdido.
-  + **Grid.hs**: Representa el tablero del juego, incluyendo la inicialización y actualización de la misma.
-  + **Tile.hs**: Define la estructura de un tile en el juego, incluyendo su valor y posición.
-  + **Score.hs**: Maneja el sistema de puntuación del juego.
++ **Game/**: Contains the main game logic.
+  + **Game.hs**: Main controller that manages the game state and interactions between different components.
+  + **GameLogic.hs**: Implements the game logic, such as moving and merging tiles, as well as checking if the player has won or lost.
+  + **Grid.hs**: Represents the game board, including its initialization and updates.
+  + **Tile.hs**: Defines the structure of a tile in the game, including its value and position.
+  + **Score.hs**: Manages the game's scoring system.
 
-+ **Graphics/**: Maneja la parte gráfica del juego.
-  + **Graphics.hs**: Configuraciones generales relacionadas con la biblioteca Gloss.
-  + **Render.hs**: Funciones para renderizar el tablero, los tiles y otros elementos visuales en pantalla.
-  + **InputHandler.hs**: Gestiona los eventos de entrada del usuario, como pulsaciones de teclas.
++ **Graphics/**: Handles the graphical part of the game.
+  + **Graphics.hs**: General configurations related to the Gloss library.
+  + **Render.hs**: Functions to render the board, tiles, and other visual elements on the screen.
+  + **InputHandler.hs**: Manages user input events, such as key presses.
 
-+ **Config/**: Contiene configuraciones generales del juego.
-  + **Config.hs**: Define constantes y configuraciones como el tamaño de el tablero, colores, etc.
++ **Config/**: Contains general game configurations.
+  + **Config.hs**: Defines constants and configurations such as board size, colors, etc.
 
 #### tests/
 
-Esta carpeta contiene pruebas unitarias y pruebas de integración para asegurar la calidad del código.
+This folder contains unit tests and integration tests to ensure code quality.
 
-+ **GameTests.hs**: Pruebas relacionadas con la lógica del juego.
-+ **GraphicsTests.hs**: Pruebas relacionadas con la parte gráfica.
++ **GameTests.hs**: Tests related to the game logic.
++ **GraphicsTests.hs**: Tests related to the graphical part.
 
-### assets/
+#### Other Files
 
-Esta carpeta almacena todos los recursos utilizados en el juego.
++ **README.md**: This file provides information about the project, its structure, and how to run it.
 
-+ **images/**: Imágenes que se utilizarán en el juego (por ejemplo, sprites de los tiles).
-+ **sounds/**: Archivos de sonido para efectos o música de fondo.
-+ **fonts/**: Fuentes utilizadas para mostrar texto en el juego.
+### Development and Execution
 
-#### Otros Archivos
+To develop and run the game using Visual Studio Code (VSCode), you need some specific extensions and tools. Below are the requirements and installation methods from the terminal.
 
-+ **README.md**: Este archivo proporciona información sobre el proyecto, su estructura y cómo ejecutarlo.
+#### Requirements
 
-### Desarrollo y Ejecución
+1. Haskell Platform: You need to have Haskell installed on your system. This includes the GHC compiler and the Cabal package manager.
 
-Para desarrollar y ejecutar  usando Visual Studio Code (VSCode), se necesitan algunas extensiones y herramientas específicas. A continuación, se detallan los requisitos y las vías de instalación desde la terminal.
+2. VSCode Extensions:
 
-#### ▎Requisitos
+   • Haskell Language Server: Provides support for Haskell editing, including autocompletion, type checking, and more.
 
-1. Haskell Platform: Necesitas tener Haskell instalado en tu sistema. Esto incluye el compilador GHC y el gestor de paquetes Cabal.
+   • Haskell Syntax Highlighting: Enhances the readability of Haskell code with syntax highlighting.
 
-2. Extensiones de VSCode:
+   • Code Runner (optional): Allows you to run code snippets directly from the editor.
 
-   • Haskell Language Server: Proporciona soporte para la edición de Haskell, incluyendo autocompletado, verificación de tipos y más.
+#### Installation of Requirements
 
-   • Haskell Syntax Highlighting: Mejora la legibilidad del código Haskell con resaltado de sintaxis.
+1. Installing Haskell
 
-   • Code Runner (opcional): Permite ejecutar fragmentos de código directamente desde el editor.
+Depending on your operating system, you can install Haskell using GHCup, which is a recommended tool for managing Haskell installations. Here is how to do it:
 
-#### ▎Instalación de Requerimientos
+On macOS or Linux
 
-▎1. Instalación de Haskell
-
-Dependiendo de tu sistema operativo, puedes instalar Haskell utilizando GHCup, que es una herramienta recomendada para gestionar las instalaciones de Haskell. Aquí te muestro cómo hacerlo:
-
-▎En macOS o Linux
-
-Abre la terminal y ejecuta:
+Open the terminal and run:
 
 `curl --proto '=https' --tlsv1.2 -sSf <https://get.haskellstack.org/> | sh`
 
-Esto instalará Stack, que es un gestor de proyectos para Haskell y también instalará GHC y Cabal si no están presentes.
+This will install Stack, which is a project manager for Haskell and will also install GHC and Cabal if they are not present.
 
-▎En Windows
+On Windows
 
-Puedes usar el instalador de GHCup disponible en su página oficial (<https://www.haskell.org/downloads/>). Descarga el instalador y sigue las instrucciones.
+You can use the GHCup installer available on its official page (<https://www.haskell.org/downloads/>). Download the installer and follow the instructions.
 
-▎2. Instalación de Extensiones de VSCode
+2. Installing VSCode Extensions
 
-Una vez que tengas VSCode instalado, puedes instalar las extensiones necesarias desde la terminal o directamente desde la interfaz gráfica.
+Once you have VSCode installed, you can install the necessary extensions from the terminal or directly from the graphical interface.
 
-▎Desde la terminal
+From the terminal
 
-Si tienes la línea de comandos de VSCode (code) configurada, puedes usar los siguientes comandos:
+If you have the VSCode command line (code) set up, you can use the following commands:
 
 `code --install-extension haskell.haskell`
 
 `code --install-extension formulahendry.code-runner`
 
-▎Desde la Interfaz Gráfica
+From the Graphical Interface
 
-1. Abre VSCode.
+1. Open VSCode.
 
-2. Ve a la sección de extensiones (puedes usar el atajo Ctrl + Shift + X).
+2. Go to the extensions section (you can use the shortcut Ctrl + Shift + X).
 
-3. Busca "Haskell" y selecciona "Haskell Language Server" para instalarlo.
+3. Search for "Haskell" and select "Haskell Language Server" to install it.
 
-4. Busca "Code Runner" e instálalo si lo deseas.
+4. Search for "Code Runner" and install it if you want.
 
-▎Configuración del Proyecto
+Project Configuration
 
-Una vez que tengas todo instalado:
+Once you have everything installed:
 
-1. Abre el proyecto y navega hasta game en VSCode:
+1. Open the project and navigate to the game folder in VSCode:
 
    `code .`
 
-2. Instala las dependencias necesarias ejecutando:
+2. Install the necessary dependencies by running:
 
    `stack setup`
 
    `stack build`
 
-▎Ejecución del Juego
+Running the Game
 
-Para ejecutar el juego, puedes usar:
+To run the game, you can use:
 
 `stack run`
 
-Esto compilará y ejecutará la aplicación Haskell.
+This will compile and run the Haskell application.
 
-## Cómo Ejecutar el Juego
+## How to Run the Game
 
-Sigue estos pasos:
+Follow these steps:
 
-1. Clona este repositorio en tu máquina local.
-2. Navega a la carpeta del proyecto.
-3. Ejecuta stack setup para configurar GHC y las dependencias.
-4. Ejecuta stack run para iniciar el juego.
+1. Clone this repository to your local machine.
+2. Navigate to the project folder.
+3. Run `stack setup` to configure GHC and dependencies.
+4. Run `stack run` to start the game.
 
-¡Disfruta jugando 2048 en Haskell!
+Enjoy playing 2048 in Haskell!
