@@ -1,6 +1,6 @@
 module Game.Grid where
 
-import System.Random (randomRIO)
+import System.Random 
 import Game.Tile (Tile(..))  -- Importamos la definición de Tile desde Tile.hs
 
 -- Definimos el tipo de dato Grid como una lista de listas de Tiles
@@ -10,7 +10,7 @@ type Grid = [[Tile]]
 gridSize :: Int
 gridSize = 4
 
--- Inicializa un tablero vacío
+-- Inicializa un tablero vme acío
 emptyGrid :: Grid
 emptyGrid = replicate gridSize (replicate gridSize Empty)
 
@@ -33,14 +33,3 @@ insertRandomNumber grid = do
 updateGrid :: Grid -> Int -> Int -> Tile -> Grid
 updateGrid grid x y val =
     take x grid ++ [take y (grid !! x) ++ [val] ++ drop (y + 1) (grid !! x)] ++ drop (x + 1) grid
-
--- Imprime el tablero en consola
-printGrid :: Grid -> IO ()
-printGrid grid = mapM_ print grid
-
--- Ejemplo de uso
-main :: IO ()
-main = do
-    let grid = emptyGrid
-    gridWithNumber <- insertRandomNumber grid
-    printGrid gridWithNumber
