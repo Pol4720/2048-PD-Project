@@ -24,6 +24,16 @@ dist/
 
 # Ignorar otros archivos específicos del proyecto (si es necesario)
 
+# Archivos compilación Latex
+
+*.aux
+*.toc
+*.log
+*.gz
+*.fls
+*.fdb_latexmk
+*.out
+
 
 #▎Explicación de las entradas:
 #• /.stack-work/: Ignora el directorio donde Stack almacena los archivos de trabajo y compilación.
