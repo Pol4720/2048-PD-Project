@@ -1,4 +1,11 @@
-module Game.Score where
+{-# LANGUAGE OverloadedStrings #-}
+
+module Game.Score (
+    -- Lista de exportación
+    Score,
+    initialScore,
+    updateScore
+) where
 
 -- Maneja el sistema de puntuación del juego
 type Score = Int

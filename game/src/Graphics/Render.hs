@@ -1,12 +1,15 @@
-module Graphics.Render where
+module Graphics.Render (
+    -- Lista de exportación
+    renderGame
+) where
 
 import Graphics.Gloss
 import Game.Grid (Grid)
 import Game.Tile (Tile(..))
 
 -- Renderiza el tablero
-renderGrid :: Grid -> Picture
-renderGrid grid = Pictures $ concatMap renderRow (zip [0..] grid)
+renderGame :: Grid -> Picture
+renderGame grid = Pictures $ concatMap renderRow (zip [0..] grid)
 
 -- Renderiza una fila del tablero
 renderRow :: (Int, [Tile]) -> [Picture]

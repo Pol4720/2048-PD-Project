@@ -3,7 +3,7 @@ module Main where
 import Graphics.Gloss
 import Graphics.Gloss.Interface.Pure.Game
 import System.Random (randomRIO) -- Importar random
-import Game.Game -- Import the main game logic
+import Game.Game (GameState, initialGameState, render, handleInput, update) -- Import the main game logic
 
 -- Define the initial state of the game
 initialState :: GameState

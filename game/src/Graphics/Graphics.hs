@@ -1,4 +1,9 @@
-module Graphics.Graphics where
+module Graphics.Graphics (
+    -- Lista de exportación
+    window,
+    backgroundColor,
+    fps
+) where
 
 import Graphics.Gloss
 

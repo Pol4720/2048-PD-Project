@@ -1,4 +1,9 @@
-module Config.Config where
+module Config.Config (
+    -- Lista de exportación
+    boardSize,
+    tileSize,
+    backgroundColor
+) where
 
 -- Define constantes y configuraciones generales del juego
 boardSize :: Int

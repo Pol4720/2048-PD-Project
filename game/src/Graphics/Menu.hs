@@ -6,8 +6,6 @@ module Graphics.Menu (
     changeStartingTiles
 ) where
 
-import System.IO
-
 -- Function to display the menu
 displayMenu :: IO ()
 displayMenu = do
@@ -26,7 +24,7 @@ handleMenuChoice choice = case choice of
     "1" -> changeBoardSize
     "2" -> changeWinningTile
     "3" -> changeStartingTiles
-    "4" -> putStrLn "Exiting menu..."
+    "4" -> putStrLn "Exiting menu..." >> return ()
     _   -> do
         putStrLn "Invalid choice, please try again."
         displayMenu

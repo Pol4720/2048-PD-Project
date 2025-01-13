@@ -1,25 +1,26 @@
-module Game.Game where
+module Game.Game (
+    -- Lista de exportación
+    GameState,
+    initialGameState,
+    render,
+    handleInput,
+    update
+) where
 
-import Game.Grid (Grid, emptyGrid)
-import Game.Score (Score, initialScore)
+import Graphics.Gloss (Picture, blank) -- Importar Picture y blank desde Graphics.Gloss
+import Graphics.Gloss.Interface.Pure.Game (Event) -- Importar Event desde Graphics.Gloss.Interface.Pure.Game
+import Graphics.Render (renderGame) -- Importar la función de renderizado desde Graphics.Render
+import qualified Game.InputHandler as InputHandler -- Renombrar la importación de Game.InputHandler
+import Game.GameState (GameState(..), initialGameState) -- Importar GameState y initialGameState
 
--- Define el estado del juego
-data GameState = GameState
-    { grid :: Grid
-    , score :: Score
-    }
-
--- Inicializa el estado del juego
-initialGameState :: GameState
-initialGameState = GameState
-    { grid = emptyGrid
-    , score = initialScore
-    }
-
--- Renderiza el estado del juego
+-- Definir la función render
 render :: GameState -> Picture
-render = undefined -- Implementar la función de renderizado
+render state = renderGame (grid state) -- Renderizar el estado del juego
 
--- Actualiza el estado del juego
+-- Definir la función handleInput
+handleInput :: Event -> GameState -> GameState
+handleInput event state = InputHandler.handleInput event state -- Manejar la entrada del usuario
+
+-- Definir la función update
 update :: Float -> GameState -> GameState
-update _ = id -- Implementar la lógica de actualización
+update _ state = state -- Implementación de ejemplo, debe ser reemplazada por la lógica de actualización real

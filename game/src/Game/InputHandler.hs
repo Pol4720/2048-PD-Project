@@ -1,4 +1,4 @@
-module Graphics.InputHandler (
+module Game.InputHandler (
     -- Lista de exportación
     handleInput
 ) where
