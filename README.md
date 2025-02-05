@@ -1,106 +1,96 @@
 # 2048-PD-Project
 
-## 2048 Game in Haskell
+## 2048 Haskell
 
-## Description
+## Descripcion
 
-+ This repository contains a fully implemented version of the popular game 2048, developed as a final project for a declarative programming course. Built using Haskell, this project showcases functional programming principles and leverages Haskell's powerful type system.
++ Este repositorio contiene una versión completamente implementada del popular juego 2048, desarrollado como proyecto final para un curso de programación declarativa. Construido usando Haskell, este proyecto muestra los principios de la programación funcional y aprovecha el potente sistema de tipos de Haskell.
 
-## Project Structure
 
-This folder contains the game's source code.(in 2048Master we have another 2048 game but without a visual interface)
+## Estructura
 
-+ **Game2048/**: Contains the main game logic.
-  + **Main.hs**: Main controller that manages the game state and interactions between different components.
-  Implements the game logic, such as moving and merging tiles, as well as checking if the player has won or lost.
-  Also represents the game board, including its initialization and updates.
-  Defines the structure of a tile in the game, including its value and position.
-  Manages the game's scoring system.
+Esta carpeta contiene el código fuente del juego. (en 2048Master tenemos otro juego 2048 pero sin una interfaz visual)
 
-  It also Handles the graphical part of the game.
 
-### Development and Execution
++ **Game2048/**: Contiene la lógica principal del juego
+  + **Main.hs**: Controlador principal que gestiona el estado del juego y las interacciones entre los diferentes componentes.
+  Implementa la lógica del juego, como mover y fusionar fichas, así como verificar si el jugador ha ganado o perdido.
+  También representa el tablero del juego, incluyendo su inicialización y actualizaciones.
+  Define la estructura de una ficha en el juego, incluyendo su valor y posición.
+  Gestiona el sistema de puntuación del juego.
+  También maneja la parte gráfica del juego.
 
-To develop and run the game using Visual Studio Code (VSCode), you need some specific extensions and tools. Below are the requirements and installation methods from the terminal.
 
-#### Requirements
+### Ejecucion y desarrollo
 
-1. Haskell Platform: You need to have Haskell installed on your system. This includes the GHC compiler and the Cabal package manager.
+Para desarrollar y ejecutar el juego usando Visual Studio Code (VSCode), necesitas algunas extensiones y herramientas específicas. A continuación se detallan los requisitos y los métodos de instalación desde la terminal.
 
-2. VSCode Extensions:
+#### Requisitos
 
-   • Haskell Language Server: Provides support for Haskell editing, including autocompletion, type checking, and more.
+1. Plataforma Haskell: Necesitas tener Haskell instalado en tu sistema. Esto incluye el compilador GHC y el gestor de paquetes Cabal.
+Extensiones de VSCode:
+2. • Haskell Language Server: Proporciona soporte para la edición de Haskell, incluyendo autocompletado, verificación de tipos y más.
+• Haskell Syntax Highlighting: Mejora la legibilidad del código Haskell con resaltado de sintaxis.
+• Code Runner (opcional): Permite ejecutar fragmentos de código directamente desde el editor.
 
-   • Haskell Syntax Highlighting: Enhances the readability of Haskell code with syntax highlighting.
+#### Instalacion de requerimientos
 
-   • Code Runner (optional): Allows you to run code snippets directly from the editor.
+Instalación de Haskell
+Dependiendo de tu sistema operativo, puedes instalar Haskell usando GHCup, que es una herramienta recomendada para gestionar instalaciones de Haskell. Aquí te explicamos cómo hacerlo:
 
-#### Installation of Requirements
+En macOS o Linux
 
-1. Installing Haskell
-
-Depending on your operating system, you can install Haskell using GHCup, which is a recommended tool for managing Haskell installations. Here is how to do it:
-
-On macOS or Linux
-
-Open the terminal and run:
+Abre la terminal y ejecuta:
 
 `curl --proto '=https' --tlsv1.2 -sSf <https://get.haskellstack.org/> | sh`
 
-This will install Stack, which is a project manager for Haskell and will also install GHC and Cabal if they are not present.
+Esto instalará Stack, que es un gestor de proyectos para Haskell y también instalará GHC y Cabal si no están presentes.
 
-On Windows
+En Windows
 
-You can use the GHCup installer available on its official page (<https://www.haskell.org/downloads/>). Download the installer and follow the instructions.
+Puedes usar el instalador de GHCup disponible en su página oficial (https://www.haskell.org/downloads/). Descarga el instalador y sigue las instrucciones.
 
-2. Installing VSCode Extensions
+Instalación de Extensiones de VSCode
+Una vez que tengas VSCode instalado, puedes instalar las extensiones necesarias desde la terminal o directamente desde la interfaz gráfica.
 
-Once you have VSCode installed, you can install the necessary extensions from the terminal or directly from the graphical interface.
+Desde la terminal
 
-From the terminal
-
-If you have the VSCode command line (code) set up, you can use the following commands:
+Si tienes la línea de comandos de VSCode (code) configurada, puedes usar los siguientes comandos:
 
 `code --install-extension haskell.haskell`
 
 `code --install-extension formulahendry.code-runner`
 
-From the Graphical Interface
+Desde la Interfaz Gráfica
 
-1. Open VSCode.
+Abre VSCode.
+Ve a la sección de extensiones (puedes usar el atajo Ctrl + Shift + X).
+Busca "Haskell" y selecciona "Haskell Language Server" para instalarlo.
+Busca "Code Runner" e instálalo si lo deseas.
+Configuración del Proyecto
 
-2. Go to the extensions section (you can use the shortcut Ctrl + Shift + X).
+Una vez que tengas todo instalado:
 
-3. Search for "Haskell" and select "Haskell Language Server" to install it.
+Abre el proyecto y navega a la carpeta del juego en VSCode:
+code .
+Instala las dependencias necesarias ejecutando:
+`cabal build`
+Ejecución del Juego
 
-4. Search for "Code Runner" and install it if you want.
-
-Project Configuration
-
-Once you have everything installed:
-
-1. Open the project and navigate to the game folder in VSCode:
-
-   `code .`
-
-2. Install the necessary dependencies by running:
-   `cabal build`
-
-Running the Game
-
-To run the game, you can use:
+Para ejecutar el juego, puedes usar:
 
 `cabal run`
 
-This will compile and run the Haskell application.
+Esto compilará y ejecutará la aplicación de Haskell.
 
-## How to Run the Game
+## Como ejecutar el juego
 
 Follow these steps:
 
-1. Clone this repository to your local machine.
-2. Navigate to the project folder.
-3. Run `cabal setup` to configure GHC and dependencies.
-4. Run `cabal run` to start the game.
+Sigue estos pasos:
 
-Enjoy playing 2048 in Haskell!
+1. Clona este repositorio en tu máquina local.
+2. Navega a la carpeta del proyecto.
+3. Ejecuta cabal setup para configurar GHC y las dependencias.
+4. Ejecuta cabal run para iniciar el juego.
+5. ¡Disfruta jugando al 2048 en Haskell!
