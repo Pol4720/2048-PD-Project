@@ -8,51 +8,16 @@
 
 ## Project Structure
 
-### game/
+This folder contains the game's source code.(in 2048Master we have another 2048 game but without a visual interface)
 
-+ **stack.yaml**: Configuration file for Stack, including the dependencies needed to compile and run the game.
++ **Game2048/**: Contains the main game logic.
+  + **Main.hs**: Main controller that manages the game state and interactions between different components.
+  Implements the game logic, such as moving and merging tiles, as well as checking if the player has won or lost.
+  Also represents the game board, including its initialization and updates.
+  Defines the structure of a tile in the game, including its value and position.
+  Manages the game's scoring system.
 
-#### assets/
-
-This folder stores all the resources used in the game.
-
-+ **images/**: Images used in the game (e.g., tile sprites).
-+ **sounds/**: Sound files for effects or background music.
-+ **fonts/**: Fonts used to display text in the game.
-
-#### app/
-
-+ **Main.hs**: This is the entry point of the program. Here the game is initialized, event loops are set up, and execution begins.
-
-#### src/
-
-This folder contains the game's source code.
-
-+ **Game/**: Contains the main game logic.
-  + **Game.hs**: Main controller that manages the game state and interactions between different components.
-  + **GameLogic.hs**: Implements the game logic, such as moving and merging tiles, as well as checking if the player has won or lost.
-  + **Grid.hs**: Represents the game board, including its initialization and updates.
-  + **Tile.hs**: Defines the structure of a tile in the game, including its value and position.
-  + **Score.hs**: Manages the game's scoring system.
-
-+ **Graphics/**: Handles the graphical part of the game.
-  + **Graphics.hs**: General configurations related to the Gloss library.
-  + **Render.hs**: Functions to render the board, tiles, and other visual elements on the screen.
-  + **InputHandler.hs**: Manages user input events, such as key presses.
-
-+ **Config/**: Contains general game configurations.
-  + **Config.hs**: Defines constants and configurations such as board size, colors, etc.
-
-#### tests/
-
-This folder contains unit tests and integration tests to ensure code quality.
-
-+ **GameTests.hs**: Tests related to the game logic.
-+ **GraphicsTests.hs**: Tests related to the graphical part.
-
-#### Other Files
-
-+ **README.md**: This file provides information about the project, its structure, and how to run it.
+  It also Handles the graphical part of the game.
 
 ### Development and Execution
 
@@ -119,16 +84,13 @@ Once you have everything installed:
    `code .`
 
 2. Install the necessary dependencies by running:
-
-   `stack setup`
-
-   `stack build`
+   `cabal build`
 
 Running the Game
 
 To run the game, you can use:
 
-`stack run`
+`cabal run`
 
 This will compile and run the Haskell application.
 
@@ -138,7 +100,7 @@ Follow these steps:
 
 1. Clone this repository to your local machine.
 2. Navigate to the project folder.
-3. Run `stack setup` to configure GHC and dependencies.
-4. Run `stack run` to start the game.
+3. Run `cabal setup` to configure GHC and dependencies.
+4. Run `cabal run` to start the game.
 
 Enjoy playing 2048 in Haskell!
